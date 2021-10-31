@@ -1,0 +1,25 @@
+{% extends 'portfolio/base.html' %}{% block content %}
+    <!-- <h1 class="text-center">Serozhenka's Portfolio</h1> -->
+
+    {% load static %}
+
+    <img src="{% static 'portfolio/wallpaper2you_484425.jpg' %}" class="mx-auto d-block rounded mt-3 mb-5" height= 50% width = 50%>
+    <br>
+
+    <div class="margins mb-5">
+      <h2>Portfolio</h2>
+      <hr>
+      <div class="row">
+        {% for project in projects %}
+            <div class="col-lg-4 col-md-6 mt-2">
+              <img src="{{ project.image.url }}" class="img-fluid mb-1">
+              <h2 class="mt-2">{{ project.title }}</h2>
+              <div class='mb-1'>{{ project.description|truncatechars:100 }}</div>
+              {% if project.url %}
+                <a href="{{ project.url }}" class="link">Project Page</a>
+              {% endif %}
+            </div>
+        {% endfor %}
+      </div>
+    </div>
+{% endblock %}

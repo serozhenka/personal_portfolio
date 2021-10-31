@@ -1,0 +1,27 @@
+.link {
+  text-decoration: none!important;
+  color: black;
+}
+
+.link:hover {
+  color: #575c58!important;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.white {
+  color: white;
+}
+
+.margins {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.date {
+  font-size:16px;
+  font-family:inherit;
+  color: gray;
+}
