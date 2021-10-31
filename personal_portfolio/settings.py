@@ -131,5 +131,5 @@ MEDIA_URL = '/media/'
 
 try:
     from .local_settings import *
-except ImportError():
+except TypeError():
     print("Local file not existing. You must be on production")
